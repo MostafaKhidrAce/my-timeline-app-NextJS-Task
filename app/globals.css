@@ -15,8 +15,8 @@ body {
   color: red !important;
   text-align: left;
   white-space: pre-line;
-  font-size: 1.2rem !important;
+  font-size: 1rem !important;
   font-weight: 900;
   padding-top: 80px;
-  -webkit-text-stroke: 0.9px rgb(197, 197, 197);
+  -webkit-text-stroke: 0.2px rgb(255, 255, 255);
 }
