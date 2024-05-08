@@ -32,3 +32,5 @@ The application will fetch user timeline data from a **Supabase** database and d
 - Use Google Maps: [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/overview)
 - Connect to Foursquare: [Foursquare Places API](https://docs.foursquare.com/developer/reference/places-nearby)
 - Day Switcher Component: [React Date Picker](https://mui.com/x/react-date-pickers/date-picker/)
+
+- DEMO [ VERCEL ](https://my-timeline-app-next-js-task.vercel.app/)
