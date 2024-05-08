@@ -18,7 +18,7 @@ export default function MainSection() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/api/places/${dayValue}`);
+        const res = await fetch(`/api/places/${dayValue}`);
         const data = await res.json();
         setPlaces(data);
       } catch (error) {
