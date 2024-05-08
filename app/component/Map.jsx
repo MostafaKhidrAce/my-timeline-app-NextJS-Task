@@ -141,14 +141,14 @@ export default function Map({ data }) {
         Authorization: process.env.NEXT_PUBLIC_FOURSQUARE_AUTH_TOKEN,
       },
     };
-
     Promise.all(
       data.map((item) => {
         const [lat, long] = item.lat_long.split(",");
         const formattedLat = parseFloat(lat).toFixed(2);
         const formattedLong = parseFloat(long).toFixed(2);
+        const query = item.item_value;
         return fetch(
-          `https://api.foursquare.com/v3/places/search?ll=${formattedLat},${formattedLong}`,
+          `https://api.foursquare.com/v3/places/search?ll=${formattedLat},${formattedLong}&query=${query}`,
           options
         ).then((response) => response.json());
       })
