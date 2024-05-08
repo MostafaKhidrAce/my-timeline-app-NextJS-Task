@@ -191,6 +191,7 @@ export default function Map({ data }) {
                   color: "black",
                   fontSize: "20px",
                   fontWeight: "bold",
+                  className: "m_label",
                 }}
                 icon={{
                   url: "https://static.vecteezy.com/system/resources/previews/011/016/930/original/location-pin-3d-image-for-travel-equipment-location-pin-with-red-color-shade-in-a-3d-effect-gps-location-pin-on-a-transparent-background-free-png.png",
