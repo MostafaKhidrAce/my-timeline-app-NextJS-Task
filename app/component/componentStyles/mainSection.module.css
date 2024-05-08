@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  min-height: 50vh;
+  padding: 3rem;
+  user-select: none;
+}
+.date_container {
+  padding: 0.8rem;
+  border-radius: 10px;
+  background-color: rgb(83, 83, 83);
+  display: flex;
+  width: 100%;
+}
+.date_container > div {
+  width: 100%;
+}
+.date_container > div > div {
+  color: #fff;
+  user-select: none;
+}
+.date_container label {
+  color: rgb(255, 255, 255);
+}
+.map_container {
+  background-color: rgb(83, 83, 83);
+  padding: 0.8rem;
+  border-radius: 10px;
+}
