@@ -15,7 +15,7 @@ export default function Map({ data }) {
   const [labelData, setLabelData] = useState(data);
 
   //map styling
-
+  console.log(labelData);
   const mapStyle = [
     {
       featureType: "landscape.natural",
