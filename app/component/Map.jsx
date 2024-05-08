@@ -15,7 +15,6 @@ export default function Map({ data }) {
   const [labelData, setLabelData] = useState(data);
 
   //map styling
-  console.log(labelData);
   const mapStyle = [
     {
       featureType: "landscape.natural",
@@ -101,7 +100,7 @@ export default function Map({ data }) {
   //center and fit
 
   useEffect(() => {
-    if (map && data.length > 0) {
+    if (data.length > 0) {
       const newBounds = new window.google.maps.LatLngBounds();
       data.forEach((event) => {
         const [lat, lng] = event.lat_long.split(",").map(parseFloat);
@@ -115,7 +114,7 @@ export default function Map({ data }) {
         left: 100,
       });
     }
-  }, [map, data]);
+  }, [data]);
 
   //format
 
