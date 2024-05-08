@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js App – Test Project
 
-## Getting Started
+## Objective:
 
-First, run the development server:
+Create a web application using **Next.js** and **MUI (Material-UI)** that visually represents a user's day timeline on an interactive map.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Description:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will fetch user timeline data from a **Supabase** database and display it on a map using **Google Maps**. Each event in the user's timeline represents a location where the user spent some time. The map should display markers for each location, showing the duration the user spent there. Additionally, the map should adjust its view to fit all markers for a given day, with some offset for better presentation.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Inputs:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Date Range:** `2024-03-01` to `2024-03-05`
 
-## Learn More
+### Steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. **Data Retrieval:** Connect to Supabase to fetch user timeline data from the `Places` table.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Map Interface:** Implement an interactive map in React with the following features:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   - Markers at user locations for each day, displaying duration (e.g., `2hrs, 20mins`)
+   - Hover info displaying start and end timestamps, along with duration, upon hovering over markers
+   - Map window displaying the smallest radius to fit all user locations for the day in one view, with some offset.
 
-## Deploy on Vercel
+3. **Day Switcher:** Create a component to switch between days and update the map accordingly.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Places Data:** Use Foursquare’s Nearby Places API to fetch and display place names and categories, enhancing the marker information.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### References:
+
+- Connect to Supabase: [Supabase Quickstart](https://supabase.com/docs/guides/getting-started/quickstarts/nextjs)
+- Use Google Maps: [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/overview)
+- Connect to Foursquare: [Foursquare Places API](https://docs.foursquare.com/developer/reference/places-nearby)
+- Day Switcher Component: [React Date Picker](https://mui.com/x/react-date-pickers/date-picker/)
